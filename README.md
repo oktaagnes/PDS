@@ -44,9 +44,9 @@ from joblib import dump, load
 
 
 ## Business Dashboard
-Business dashboard yang dibuat menggunakan Looker Studio. Dashboard ini memberikan informasi yang jelas mengenai performa akademik siswa dan indikator dropout. Salah satu faktor utama yang ditemukan adalah rasio performa akademik pada semester 1 dan 2. Siswa dengan rasio rendah, dihitung dari jumlah unit kurikulum yang diambil (enrolled) dibandingkan dengan yang lulus (approved), cenderung memiliki risiko dropout yang lebih tinggi.
-![image](./images/oktaagnes_dashboard.png)
-gambar 1 dashboard
+Business dashboard yang dibuat menggunakan Looker Studio. Dashboard ini memberikan informasi yang jelas mengenai performa akademik siswa dan indikator dropout. Salah satu faktor utama yang ditemukan adalah rasio performa akademik pada semester 1 dan 2. Siswa dengan rasio rendah, dihitung dari jumlah unit kurikulum yang diambil (enrolled) dibandingkan dengan yang lulus (approved), cenderung memiliki risiko dropout yang lebih tinggi.<br>
+![image](./images/oktaagnes_dashboard.jpg) <br>
+gambar 1 dashboard<br>
 
 ## Menjalankan Sistem Machine Learning
 #### Menjalankan Prototype Sistem Machine Learning 
