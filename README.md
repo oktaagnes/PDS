@@ -41,7 +41,8 @@ from sklearn.metrics import confusion_matrix, recall_score, f1_score, accuracy_s
 # deploy
 from joblib import dump, load
 ```
-
+### Data Understanding
+- **Dataset sttsus student:** Dataset yang digunakan adalah tentang performa murid dengan jumlah data sebanyak 4424 baris dan 37 kolom yang terbagi menjadi 36 kolom independen yang akan digunakan untuk melatih model dan 1 kolom yaitu kolom Status sebagai targetnya.
 
 ## Business Dashboard
 Business dashboard yang dibuat menggunakan Looker Studio. Dashboard ini memberikan informasi yang jelas mengenai performa akademik siswa dan indikator dropout. Salah satu faktor utama yang ditemukan adalah rasio performa akademik pada semester 1 dan 2. Siswa dengan rasio rendah, dihitung dari jumlah unit kurikulum yang diambil (enrolled) dibandingkan dengan yang lulus (approved), cenderung memiliki risiko dropout yang lebih tinggi.<br>
@@ -49,41 +50,31 @@ Business dashboard yang dibuat menggunakan Looker Studio. Dashboard ini memberik
 gambar 1 dashboard<br>
 
 ## Menjalankan Sistem Machine Learning
-#### Menjalankan Prototype Sistem Machine Learning 
+### How to Run
+1. Clone the repository or download the source code.
+```bash
+https://github.com/halimsajidi/Student-Performance-Predictions.git
+```
+2. Setup Environment
+```bash
+conda create --name main-ds python
+conda activate main-ds
+```
+3. Install the required Python packages
+```bash
+cd dashboard
+```
+```bash
+pip install -r requirements.txt
+```
+4. Run the Streamlit app using:
+```bash
+streamlit run app.py
+```
+4. Buka tautan yang disediakan oleh Streamlit untuk mengakses dasbor di browser web Anda.
+5. uploade test data untuk mencoba aplikasi machine learning.
 
-Prototipe sistem machine learning yang dibuat menggunakan algoritma K-Means clustering bertujuan untuk mengelompokkan data berdasarkan kesamaan fitur. Berikut adalah langkah-langkah yang dilakukan untuk menjalankan sistem ini.
-
-### 1. Persiapan Data
-Sebelum melakukan clustering, data yang digunakan perlu diproses dengan menghapus kolom target (seperti kolom "Status" atau "Attrition") agar hanya fitur yang digunakan dalam proses clustering.
-
-```python
-data_for_clustering = processed_df.drop(columns=['Status'], errors='ignore')
-
-### 2. Menentukan Jumlah Cluster Optimal
-Fungsi determine_optimal_clusters digunakan untuk menentukan jumlah cluster yang optimal menggunakan dua metode evaluasi:
-- Elbow Method: Menghitung inertia (jumlah kuadrat jarak antara titik data dan centroid) untuk setiap jumlah cluster yang diuji. Titik di mana penurunan inertia mulai melambat menunjukkan jumlah cluster optimal.
-- Silhouette Score: Mengukur kualitas clustering berdasarkan kedekatan data dengan cluster yang tepat dan seberapa jauh jaraknya ke cluster lainnya
-
-#### 3. Melatih Model K-Means
-Setelah menentukan jumlah cluster yang optimal, model K-Means diinisialisasi dengan jumlah cluster yang telah dipilih (misalnya 4 cluster). Model kemudian dilatih menggunakan data yang telah diproses.
-```python
-kmeans = KMeans(n_clusters=4, random_state=42)
-cluster_labels = kmeans.fit_predict(data_for_clustering)
-
-#### 4. Menambahkan Hasil Clustering ke DataFrame
-Label cluster yang dihasilkan oleh K-Means kemudian ditambahkan ke dalam DataFrame untuk mempermudah analisis lebih lanjut
-
-#### 5. Menampilkan Centroid dan Distribusi Cluster
-Centroid dari setiap cluster (titik tengah setiap cluster) dan jumlah data dalam setiap cluster ditampilkan untuk memberikan wawasan lebih lanjut mengenai distribusi data dalam cluster.
-
-#### 6. Visualisasi Cluster dengan PCA
-Untuk mempermudah pemahaman tentang hasil clustering, visualisasi dilakukan dengan menggunakan PCA (Principal Component Analysis) untuk mereduksi data menjadi dua dimensi.
-
-#### 7. Menghitung Silhouette Score
-Silhouette Score dihitung untuk mengevaluasi seberapa baik clustering yang dilakukan. Skor ini mengukur seberapa baik data dalam setiap cluster dibandingkan dengan data di cluster lainnya.
-
-#### 8. Distribusi Attrition di Setiap Cluster
-Untuk menganalisis distribusi status "Attrition" (misalnya, apakah karyawan berhenti atau tidak) di setiap cluster, digunakan grafik countplot.
+[StreamlitApp](https://s6kk3tckfbfcj2u6rofppd.streamlit.app/)
 
 
 ## Conclusion
@@ -92,7 +83,9 @@ Analisis yang dilakukan menunjukkan bahwa siswa dengan performa akademik rendah 
 Laporan ini memberikan dasar untuk perbaikan strategi pembelajaran dan dukungan akademik di masa depan.
 
 ### Rekomendasi Action Items
-Berdasarkan hasil analisis dan modeling, berikut adalah beberapa rekomendasi action items yang dapat dilakukan oleh Jaya Jaya Institut untuk mengurangi angka dropout dan meningkatkan performa akademik siswa:
+-**Intervensi Awal:** Mengidentifikasi mahasiswa yang berisiko tinggi untuk dropout sejak semester pertama, terutama berdasarkan jenis kelamin, status pernikahan, dan usia pendaftaran, sehingga intervensi seperti konseling atau bimbingan tambahan dapat diberikan.
+- **Dukungan Keuangan:** Memberikan lebih banyak kesempatan beasiswa kepada siswa yang berpotensi, karena ini dapat meningkatkan peluang mereka untuk lulus.
+- **Pendekatan Khusus Berdasarkan Jurusan:** Menyesuaikan program dukungan atau bimbingan akademik berdasarkan jurusan yang memiliki tingkat dropout lebih tinggi, seperti jurusan management.
+- **Fokus pada Nilai Akademik:** Menyediakan program bimbingan belajar atau tutor tambahan bagi mahasiswa dengan nilai akademik rendah agar dapat meningkatkan performa akademik dan mengurangi risiko putus kuliah.
 
-- Program Bimbingan Akademik Khusus Mengimplementasikan program bimbingan akademik khusus bagi siswa yang teridentifikasi memiliki rasio performa akademik rendah di semester awal. Program ini dapat mencakup mentoring, bantuan pengajaran tambahan, dan pemantauan yang lebih dekat oleh tutor.
-- Link app.py: https://s6kk3tckfbfcj2u6rofppd.streamlit.app/
+Dengan memahami faktor-faktor yang mempengaruhi tingkat dropout, institusi pendidikan dapat mengambil langkah-langkah proaktif untuk mendukung mahasiswa dalam menyelesaikan studi mereka.
