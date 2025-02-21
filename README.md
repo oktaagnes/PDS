@@ -83,7 +83,7 @@ Analisis yang dilakukan menunjukkan bahwa siswa dengan performa akademik rendah 
 Laporan ini memberikan dasar untuk perbaikan strategi pembelajaran dan dukungan akademik di masa depan.
 
 ### Rekomendasi Action Items
--**Intervensi Awal:** Mengidentifikasi mahasiswa yang berisiko tinggi untuk dropout sejak semester pertama, terutama berdasarkan jenis kelamin, status pernikahan, dan usia pendaftaran, sehingga intervensi seperti konseling atau bimbingan tambahan dapat diberikan.
+- **Intervensi Awal:** Mengidentifikasi mahasiswa yang berisiko tinggi untuk dropout sejak semester pertama, terutama berdasarkan jenis kelamin, status pernikahan, dan usia pendaftaran, sehingga intervensi seperti konseling atau bimbingan tambahan dapat diberikan.
 - **Dukungan Keuangan:** Memberikan lebih banyak kesempatan beasiswa kepada siswa yang berpotensi, karena ini dapat meningkatkan peluang mereka untuk lulus.
 - **Pendekatan Khusus Berdasarkan Jurusan:** Menyesuaikan program dukungan atau bimbingan akademik berdasarkan jurusan yang memiliki tingkat dropout lebih tinggi, seperti jurusan management.
 - **Fokus pada Nilai Akademik:** Menyediakan program bimbingan belajar atau tutor tambahan bagi mahasiswa dengan nilai akademik rendah agar dapat meningkatkan performa akademik dan mengurangi risiko putus kuliah.
