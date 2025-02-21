@@ -45,7 +45,7 @@ from joblib import dump, load
 - **Dataset sttsus student:** Dataset yang digunakan adalah tentang performa murid dengan jumlah data sebanyak 4424 baris dan 37 kolom yang terbagi menjadi 36 kolom independen yang akan digunakan untuk melatih model dan 1 kolom yaitu kolom Status sebagai targetnya.
 
 ## Business Dashboard
-Business dashboard yang dibuat menggunakan Looker Studio. Dashboard ini memberikan informasi yang jelas mengenai performa akademik siswa dan indikator dropout. Salah satu faktor utama yang ditemukan adalah rasio performa akademik pada semester 1 dan 2. Siswa dengan rasio rendah, dihitung dari jumlah unit kurikulum yang diambil (enrolled) dibandingkan dengan yang lulus (approved), cenderung memiliki risiko dropout yang lebih tinggi.[dashboard](https://lookerstudio.google.com/u/0/reporting/997aa687-310d-4269-8a1e-182fd01480f9/page/E1uvE)<br>
+Business dashboard yang dibuat menggunakan Looker Studio. Dashboard ini memberikan informasi yang jelas mengenai performa akademik siswa dan indikator dropout. Salah satu faktor utama yang ditemukan adalah rasio performa akademik pada semester 1 dan 2. Siswa dengan rasio rendah, dihitung dari jumlah unit kurikulum yang diambil (enrolled) dibandingkan dengan yang lulus (approved), cenderung memiliki risiko dropout yang lebih tinggi.[dashboard](https://lookerstudio.google.com/reporting/997aa687-310d-4269-8a1e-182fd01480f9)<br>
 ![image](./agnes_dashboard.jpg) <br>
 gambar 1 dashboard<br>
 
